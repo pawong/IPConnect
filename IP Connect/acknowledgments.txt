@@ -1,0 +1,3 @@
+Shows the internet status, external and internal IP address in your Mac menu bar.
+
+Released under the MIT License.
