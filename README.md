@@ -10,7 +10,7 @@ Shows the internet status, external and internal IP address in your Mac menu bar
 ![](Screenshot1.png)
 
 ## Versions
->[1.0.8](Builds/IPConnect_v1.0.8/IPConnect.zip)
+>[1.0.8](builds/IPConnect_v1.0.8/IPConnect.zip)
 >    Changes:
 >    - First Open Source Release
 
