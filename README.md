@@ -1,4 +1,4 @@
-# IP Connect ![](IPConnect/Assets.xcassets/AppIcon.appiconset/IPConnect-6.png)
+# IP Connect ![](https://github.com/pawong/IPConnect/blob/d6d0bfed522e99b60daf7c99852108cdc280175f/IP%20Connect/Assets.xcassets/AppIcon.appiconset/icon_32x32@2x.png)
 
 Shows the internet status, external and internal IP address in your Mac menu bar. Get up to date connection notifications when the status changes.
 
@@ -10,11 +10,26 @@ Shows the internet status, external and internal IP address in your Mac menu bar
 ![](Screenshot1.png)
 
 ## Versions
+>[1.0.9](builds/IPConnect_v1.0.9/IPConnect.zip)
+>    Changes:
+>    - Ventura bug fixes
+
 >[1.0.8](builds/IPConnect_v1.0.8/IPConnect.zip)
 >    Changes:
 >    - First Open Source Release
 
 
+## Notes
+
+You can enable `Location Services` via the commandline to map your current location. I've found that this can cause memory to leak, however, it never leaks a huge amount.
+
+1. Quit IP Connect. And or kill the process by double clicking on it in the activity monitor and choosing Quit.
+2. Open a terminal.
+3. At the prompt, type the following command:
+    ```bash
+    open -a /Applications/IP\ Connect.app/ --args -L:1
+    ```
+    Use 1 for enabling, 0 fr disabling.
 
 ## Support
 

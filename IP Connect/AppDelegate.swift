@@ -51,7 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         // get ip as fast as you can
         network.getPublicIPWait()
 
-        statusItem.image = settings.settings.useColorIcons
+        statusItem.button?.image = settings.settings.useColorIcons
             ? NSImage(named:"StatusBarGray") : NSImage(named:"StatusBarChecking")
         startHost(at: 1)
 
@@ -204,25 +204,25 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         }
         
         if reachability?.connection == Reachability.Connection.none {
-            statusItem.image = settings.settings.useColorIcons ?
+            statusItem.button?.image = settings.settings.useColorIcons ?
                 NSImage(named:"StatusBarRed") : NSImage(named:"StatusBarNotConnected")
         } else if reachability?.connection == Reachability.Connection.wifi && network.externalIP != "N/A" {
-            statusItem.image = settings.settings.useColorIcons
+            statusItem.button?.image = settings.settings.useColorIcons
                 ? NSImage(named:"StatusBarGreen") : NSImage(named:"StatusBarConnected")
         } else if reachability?.connection == Reachability.Connection.cellular && network.externalIP != "N/A" {
-            statusItem.image = settings.settings.useColorIcons
+            statusItem.button?.image = settings.settings.useColorIcons
                 ? NSImage(named:"StatusBarBlue") : NSImage(named:"StatusBarCell")
         } else {
-            statusItem.image = settings.settings.useColorIcons
+            statusItem.button?.image = settings.settings.useColorIcons
                 ? NSImage(named:"StatusBarOrange") : NSImage(named:"StatusBarWarning")
         }
         if settings.settings.showExternalIP == true {
-            statusItem.attributedTitle = NSAttributedString(
+            statusItem.button?.attributedTitle = NSAttributedString(
                 string:  network.externalIP,
                 attributes: [NSAttributedString.Key.font:  NSFont(name: "Helvetica Neue", size: 13)!]
             )
         } else {
-            statusItem.attributedTitle = nil
+            statusItem.button?.attributedTitle = NSAttributedString()
         }
         
         constructMenu()
