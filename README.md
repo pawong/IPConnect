@@ -29,7 +29,7 @@ You can enable `Location Services` via the commandline to map your current locat
     ```bash
     open -a /Applications/IP\ Connect.app/ --args -L:1
     ```
-    Use 1 for enabling, 0 fr disabling.
+    Use -L:1 for enabling, -L:0 for disabling.
 
 ## Support
 

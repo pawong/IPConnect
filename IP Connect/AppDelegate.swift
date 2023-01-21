@@ -219,7 +219,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         if settings.settings.showExternalIP == true {
             statusItem.button?.attributedTitle = NSAttributedString(
                 string:  network.externalIP,
-                attributes: [NSAttributedString.Key.font:  NSFont(name: "Helvetica Neue", size: 13)!]
+                attributes: [NSAttributedString.Key.font:  NSFont(name: "Helvetica Neue", size: 12)!]
             )
         } else {
             statusItem.button?.attributedTitle = NSAttributedString()
